@@ -24,3 +24,29 @@ This module contains 3 base objects:
 1. Presenter - base class for working with UI. Only this object works with UI and implements delegate/data source of view if needed.
 2. Data source - storage of models
 3. Map - object returns information about views which should be used for model or index path
+
+## Bit of code
+
+```swift
+
+  var presenter: TablePresenter<ArraySource<MenuCellModel>>!
+  
+	lazy var dataSource: ArraySource<MenuCellModel> = [
+		MenuCellModel(title: "Table View", segueID: "Table"),
+		MenuCellModel(title: "Collection View", segueID: "Collection"),
+		MenuCellModel(title: "iPhone/iPad", segueID: "Universal"),
+		MenuCellModel(title: "Custom View", segueID: "Custom"),
+		MenuCellModel(title: "One table view, several data sources", segueID: "Segment")
+	]
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    let map = DefaultMap()
+    map.viewInfoGeneration = { _,_ in ViewInfo(identifier: "Cell", viewClass: MocTableCell.self) }
+
+    presenter = TablePresenter(tableView, source: dataSource, map: map)
+    presenter.delegate.didSelectCell = { [unowned self] _, model, _ in
+      self.performSegue(withIdentifier: model.segueID, sender: nil)
+    }
+  }
+  ```
