@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import CollectionPresenterFramework
+import Griddle
 
 class TableHeader: HeaderFooterView<String> {
     override class func size(for model: String, container: UIView) -> CGSize? { return CGSize(width: 0, height: 40) }

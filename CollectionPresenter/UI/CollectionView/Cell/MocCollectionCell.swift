@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CollectionPresenterFramework
+import Griddle
 
 class MocCollectionCell: CollectionViewCell<String> {
 	

@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import CollectionPresenterFramework
+import Griddle
 
 class UniversalController: UIViewController {
     var contentView: UIView!

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CollectionPresenterFramework
+import Griddle
 
 struct MenuCellModel: Stringable {
     var title: String
@@ -18,7 +18,7 @@ struct MenuCellModel: Stringable {
 
 class MenuMap: Map {
 	
-	func viewInfo(for model: Any, indexPath: CollectionPresenterFramework.IndexPath) -> ViewInfo? {
+	func viewInfo(for model: Any, indexPath: Griddle.IndexPath) -> ViewInfo? {
 		return ViewInfo(identifier: "Cell", viewClass: MocTableCell.self)
 	}
 	

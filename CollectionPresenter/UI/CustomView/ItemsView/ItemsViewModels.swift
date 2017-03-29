@@ -8,12 +8,12 @@
 
 import Foundation
 import UIKit
-import CollectionPresenterFramework
+import Griddle
 
 struct ItemsViewMap : Map {
     let registrationItems: [RegistrationItem] = []
 	
-	func viewInfo(for model: Any, indexPath: CollectionPresenterFramework.IndexPath) -> ViewInfo? {
+	func viewInfo(for model: Any, indexPath: Griddle.IndexPath) -> ViewInfo? {
 		return ViewInfo(identifier: "CellID", viewClass: ItemView.self)
 	}
 }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CollectionPresenterFramework
+import Griddle
 
 protocol Stringable {
 	var rawValue: String? { get }

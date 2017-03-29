@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CollectionPresenterFramework
+import Griddle
 
 class ItemView: UIControl, ReusableView {
     var contentLabel: UILabel = {

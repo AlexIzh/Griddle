@@ -14,7 +14,7 @@ public enum IndexPath {
 	case item(section: Int, item: Int)
 }
 
-public extension CollectionPresenterFramework.IndexPath {
+public extension Griddle.IndexPath {
     public enum FoundationType {
         case table, collection
     }
@@ -41,8 +41,8 @@ public extension CollectionPresenterFramework.IndexPath {
     }
 }
 
-extension CollectionPresenterFramework.IndexPath: Equatable {}
-public func ==(lhs: CollectionPresenterFramework.IndexPath, rhs: CollectionPresenterFramework.IndexPath) -> Bool {
+extension Griddle.IndexPath: Equatable {}
+public func ==(lhs: Griddle.IndexPath, rhs: Griddle.IndexPath) -> Bool {
 	switch (lhs, rhs) {
 	case let (.header(section: leftSection), .header(section: rightSection)):
 		return leftSection == rightSection

@@ -8,10 +8,10 @@
 
 import Foundation
 import UIKit
-import CollectionPresenterFramework
+import Griddle
 
 struct SegmentMap: Map {
-	func viewInfo(for model: Any, indexPath: CollectionPresenterFramework.IndexPath) -> ViewInfo? {
+	func viewInfo(for model: Any, indexPath: Griddle.IndexPath) -> ViewInfo? {
 		return ViewInfo(identifier: "Cell", viewClass: MocTableCell.self)
 	}
     var registrationItems: [RegistrationItem] = [
@@ -20,7 +20,7 @@ struct SegmentMap: Map {
 }
 
 class SegmentViewController: UIViewController {
-    @IBOutlet weak var tableView:UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     var presenter: TablePresenter<ArraySource<String>>!
     
@@ -32,7 +32,7 @@ class SegmentViewController: UIViewController {
 		presenter = TablePresenter(tableView, source: firstDataSource, map: SegmentMap())
     }
     
-    @IBAction func segmentAction(_ segment:UISegmentedControl) {
+    @IBAction func segmentAction(_ segment: UISegmentedControl) {
         if segment.selectedSegmentIndex == 0 {
             presenter.dataSource = firstDataSource
         } else {

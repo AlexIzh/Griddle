@@ -8,10 +8,10 @@
 
 import Foundation
 import UIKit
-import CollectionPresenterFramework
+import Griddle
 
 class PadMap: Map {
-	func viewInfo(for model: Any, indexPath: CollectionPresenterFramework.IndexPath) -> ViewInfo? {
+	func viewInfo(for model: Any, indexPath: Griddle.IndexPath) -> ViewInfo? {
 		return ViewInfo(identifier: "Cell", viewClass: MocCollectionCell.self)
 	}
     var registrationItems: [RegistrationItem] = [
@@ -20,7 +20,7 @@ class PadMap: Map {
 }
 
 class PhoneMap: Map {
-	func viewInfo(for model: Any, indexPath: CollectionPresenterFramework.IndexPath) -> ViewInfo? {
+	func viewInfo(for model: Any, indexPath: Griddle.IndexPath) -> ViewInfo? {
 		return ViewInfo(identifier: "Cell", viewClass: MocTableCell.self)
 	}
 	

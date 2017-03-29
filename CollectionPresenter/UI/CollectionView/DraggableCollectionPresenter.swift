@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import CollectionPresenterFramework
+import Griddle
 
 protocol DraggableCollectionPresenterDelegate: class {
-    func didMoveItem(_ fromIndexPath: CollectionPresenterFramework.IndexPath, toIndexPath: CollectionPresenterFramework.IndexPath)
+    func didMoveItem(_ fromIndexPath: Griddle.IndexPath, toIndexPath: Griddle.IndexPath)
 }
 
 class DraggableCollectionPresenter<DS: DataSource>: CollectionPresenter<DS>, DraggableCollectionViewFlowLayoutDelegate {
@@ -18,6 +18,6 @@ class DraggableCollectionPresenter<DS: DataSource>: CollectionPresenter<DS>, Dra
 	
 	func moveDataItem(_ fromIndexPath: Foundation.IndexPath, toIndexPath: Foundation.IndexPath) {}
 	func didFinishMoving(_ fromIndexPath: Foundation.IndexPath, toIndexPath: Foundation.IndexPath) {
-		self.draggableCollectionDelegate?.didMoveItem(CollectionPresenterFramework.IndexPath(.collection, fromIndexPath), toIndexPath: CollectionPresenterFramework.IndexPath(.collection, toIndexPath))
+		self.draggableCollectionDelegate?.didMoveItem(Griddle.IndexPath(.collection, fromIndexPath), toIndexPath: Griddle.IndexPath(.collection, toIndexPath))
 	}
 }

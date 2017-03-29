@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import CollectionPresenterFramework
+import Griddle
 
 class ItemsViewPresenter<DataSourceModel: DataSource>: Presenter<DataSourceModel> {
     let view: ItemsView
@@ -26,7 +26,7 @@ class ItemsViewPresenter<DataSourceModel: DataSource>: Presenter<DataSourceModel
 		view.reloadData()
 	}
 
-	open override func dataSource(_ dataSource: DataSourceModel, didMoveItemFrom from: CollectionPresenterFramework.IndexPath, to: CollectionPresenterFramework.IndexPath) {
+	open override func dataSource(_ dataSource: DataSourceModel, didMoveItemFrom from: Griddle.IndexPath, to: Griddle.IndexPath) {
 		switch (from, to) {
 		case let (.item(_, item), .item(_, toItem)):
 			view.moveItem(from: item, to: toItem)
@@ -34,17 +34,17 @@ class ItemsViewPresenter<DataSourceModel: DataSource>: Presenter<DataSourceModel
 		default: break
 		}
 	}
-	open override func dataSource(_ dataSource: DataSourceModel, didDeleteItemAt indexPath: CollectionPresenterFramework.IndexPath) {
+	open override func dataSource(_ dataSource: DataSourceModel, didDeleteItemAt indexPath: Griddle.IndexPath) {
 		if case let .item(_, index) = indexPath {
 			view.deleteItem(at: index)
 		}
 	}
-	open override func dataSource(_ dataSource: DataSourceModel, didInsertItemAt indexPath: CollectionPresenterFramework.IndexPath) {
+	open override func dataSource(_ dataSource: DataSourceModel, didInsertItemAt indexPath: Griddle.IndexPath) {
 		if case let .item(_, index) = indexPath {
 			view.insertItem(at: index)
 		}
 	}
-	open override func dataSource(_ dataSource: DataSourceModel, didUpdateItemAt indexPath: CollectionPresenterFramework.IndexPath) {
+	open override func dataSource(_ dataSource: DataSourceModel, didUpdateItemAt indexPath: Griddle.IndexPath) {
 		if case let .item(_, index) = indexPath {
 			view.reloadItem(at: index)
 		}

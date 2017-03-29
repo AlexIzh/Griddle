@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CollectionPresenterFramework
+import Griddle
 
 extension String: Stringable {
 	var rawValue: String? { return self }
