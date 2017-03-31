@@ -181,8 +181,8 @@
 			children = (
 				FA261D0B1E802AF20047334C /* CollectionPresenter */,
 				FA261D201E802AF20047334C /* CollectionPresenterTests */,
-				FA261D321E802B240047334C /* CollectionPresenterFramework */,
-				FA261D3F1E802B250047334C /* CollectionPresenterFrameworkTests */,
+				FA261D321E802B240047334C /* Griddle */,
+				FA261D3F1E802B250047334C /* GriddleTests */,
 				FA261D0A1E802AF20047334C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -221,23 +221,23 @@
 			path = CollectionPresenterTests;
 			sourceTree = "<group>";
 		};
-		FA261D321E802B240047334C /* CollectionPresenterFramework */ = {
+		FA261D321E802B240047334C /* Griddle */ = {
 			isa = PBXGroup;
 			children = (
 				FA261D4F1E802B420047334C /* Classes */,
 				FA261D331E802B240047334C /* Griddle.h */,
 				FA261D341E802B240047334C /* Info.plist */,
 			);
-			path = CollectionPresenterFramework;
+			path = Griddle;
 			sourceTree = "<group>";
 		};
-		FA261D3F1E802B250047334C /* CollectionPresenterFrameworkTests */ = {
+		FA261D3F1E802B250047334C /* GriddleTests */ = {
 			isa = PBXGroup;
 			children = (
 				FA261D401E802B250047334C /* CollectionPresenterFrameworkTests.swift */,
 				FA261D421E802B250047334C /* Info.plist */,
 			);
-			path = CollectionPresenterFrameworkTests;
+			path = GriddleTests;
 			sourceTree = "<group>";
 		};
 		FA261D4F1E802B420047334C /* Classes */ = {
