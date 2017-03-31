@@ -75,10 +75,10 @@ public protocol Map {
     var registrationItems: [RegistrationItem] { get }
 }
 
-open class DefaultMap: Map {
-	open var registrationItems: [RegistrationItem] = []
+public struct DefaultMap: Map {
+	public var registrationItems: [RegistrationItem] = []
 	
-    open var viewInfoGeneration: (Any, IndexPath) -> ViewInfo = { _ in
+    public var viewInfoGeneration: (Any, IndexPath) -> ViewInfo = { _ in
 		fatalError("You should set viewInfoGeneration for DefaultMap object")
     }
 	

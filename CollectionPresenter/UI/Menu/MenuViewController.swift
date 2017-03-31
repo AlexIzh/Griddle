@@ -13,6 +13,14 @@ class MenuViewController: UITableViewController {
 
 	var presenter: TablePresenter<ArraySource<MenuCellModel>>!
 	
+	lazy var dataSource: ArraySource<MenuCellModel> = [
+		MenuCellModel(title: "Table View", segueID: "Table"),
+		MenuCellModel(title: "Collection View", segueID: "Collection"),
+		MenuCellModel(title: "iPhone/iPad", segueID: "Universal"),
+		MenuCellModel(title: "Custom View", segueID: "Custom"),
+		MenuCellModel(title: "One table view, several data sources", segueID: "Segment")
+	]
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,12 +29,4 @@ class MenuViewController: UITableViewController {
 			self.performSegue(withIdentifier: model.segueID, sender: nil)
 		}
 	}
-	
-    lazy var dataSource: ArraySource<MenuCellModel> = [
-        MenuCellModel(title: "Table View", segueID: "Table"),
-        MenuCellModel(title: "Collection View", segueID: "Collection"),
-        MenuCellModel(title: "iPhone/iPad", segueID: "Universal"),
-        MenuCellModel(title: "Custom View", segueID: "Custom"),
-        MenuCellModel(title: "One table view, several data sources", segueID: "Segment")
-    ]
 }
