@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Griddle"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "Manager for simple work with UITableView, UICollectionView and any others collection structured views."
 
   s.description  = <<-DESC 
@@ -20,6 +20,6 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/AlexIzh/Griddle.git", :tag => "#{s.version}" }
 
-  s.source_files  = "Griddle/Classes/*.swift"
+  s.source_files  = "Griddle/Classes/*"
 
 end
