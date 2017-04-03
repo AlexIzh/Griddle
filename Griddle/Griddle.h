@@ -6,7 +6,7 @@
 //  Copyright © 2017 alexizh. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for CollectionPresenterFramework.
 FOUNDATION_EXPORT double CollectionPresenterFrameworkVersionNumber;
