@@ -11,6 +11,11 @@ It is layer for working with table view, collection view and any other views, wh
 4. Do you have universal application? iPad and iPhone versions has different views (collection view and table view, for example) but one package of data (For example, one screen on iphone has table view, but on ipad - collection)? All you need is to use different presenters and ONE data source. Don't need implement delegate and dataSource for different views with one data package anymore.
 5. Do you have custom view with collection structure and you want to use this module? It is easy. Just implement your presenter which will work with your view.
 
+## Installation
+### CocoaPods
+```
+pod 'Griddle'
+```
 ## Examples
 Current test project contains few simple examples:
 1. Simple table view
