@@ -1,6 +1,8 @@
 # Griddle
 Manager for simple work with UITableView, UICollectionView and any others collection structured views
 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 ## What is it?
 It is layer for working with table view, collection view and any other views, which has collection structure.
 
@@ -15,6 +17,10 @@ It is layer for working with table view, collection view and any other views, wh
 ### CocoaPods
 ```
 pod 'Griddle'
+```
+### Carthage
+```
+github "alexizh/Griddle"
 ```
 ## Examples
 Current test project contains few simple examples:
