@@ -1,9 +1,9 @@
 # Griddle
 
 [![Join the chat at https://gitter.im/AlexIzh/Griddle](https://badges.gitter.im/AlexIzh/Griddle.svg)](https://gitter.im/AlexIzh/Griddle?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-Manager for simple work with UITableView, UICollectionView and any others collection structured views
-
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
+Manager for simple work with UITableView, UICollectionView and any others collection structured views
 
 ## What is it?
 It is layer for working with table view, collection view and any other views, which has collection structure.
