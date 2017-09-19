@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Griddle"
-  s.version      = "1.0.4"
+  s.version      = "1.0.5"
   s.summary      = "Manager for simple work with UITableView, UICollectionView and any others collection structured views."
 
   s.description  = <<-DESC 

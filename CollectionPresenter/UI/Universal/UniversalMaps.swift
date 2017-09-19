@@ -7,24 +7,25 @@
 //
 
 import Foundation
-import UIKit
 import Griddle
+import UIKit
 
 class PadMap: Map {
-	func viewInfo(for model: Any, indexPath: Griddle.IndexPath) -> ViewInfo? {
-		return ViewInfo(identifier: "Cell", viewClass: MocCollectionCell.self)
-	}
-    var registrationItems: [RegistrationItem] = [
-        RegistrationItem(viewType: .nib(UINib(nibName: "MocCollectionCell", bundle: nil)), id: "Cell")
-    ]
+   func viewInfo(for model: Any, indexPath: Griddle.IndexPath) -> ViewInfo? {
+      return ViewInfo(identifier: "Cell", viewClass: MocCollectionCell.self)
+   }
+
+   var registrationItems: [RegistrationItem] = [
+      RegistrationItem(viewType: .nib(UINib(nibName: "MocCollectionCell", bundle: nil)), id: "Cell")
+   ]
 }
 
 class PhoneMap: Map {
-	func viewInfo(for model: Any, indexPath: Griddle.IndexPath) -> ViewInfo? {
-		return ViewInfo(identifier: "Cell", viewClass: MocTableCell.self)
-	}
-	
-    var registrationItems: [RegistrationItem] = [
-        RegistrationItem(viewType: .nib(UINib(nibName: "MocTableCell", bundle: nil)), id: "Cell"),
-    ]
+   func viewInfo(for model: Any, indexPath: Griddle.IndexPath) -> ViewInfo? {
+      return ViewInfo(identifier: "Cell", viewClass: MocTableCell.self)
+   }
+
+   var registrationItems: [RegistrationItem] = [
+      RegistrationItem(viewType: .nib(UINib(nibName: "MocTableCell", bundle: nil)), id: "Cell")
+   ]
 }

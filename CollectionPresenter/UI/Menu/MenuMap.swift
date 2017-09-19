@@ -6,23 +6,23 @@
 //  Copyright © 2016 Moqod. All rights reserved.
 //
 
-import UIKit
 import Griddle
+import UIKit
 
 struct MenuCellModel: Stringable {
-    var title: String
-    var segueID: String
-	
-	var rawValue: String? { return title }
+   var title: String
+   var segueID: String
+
+   var rawValue: String? { return title }
 }
 
 class MenuMap: Map {
-	
-	func viewInfo(for model: Any, indexPath: Griddle.IndexPath) -> ViewInfo? {
-		return ViewInfo(identifier: "Cell", viewClass: MocTableCell.self)
-	}
-	
-    var registrationItems: [RegistrationItem] = [
-		RegistrationItem(viewType: .nib(UINib(nibName: "MocTableCell", bundle: nil)), id: "Cell")
-    ]
+
+   func viewInfo(for model: Any, indexPath: Griddle.IndexPath) -> ViewInfo? {
+      return ViewInfo(identifier: "Cell", viewClass: MocTableCell.self)
+   }
+
+   var registrationItems: [RegistrationItem] = [
+      RegistrationItem(viewType: .nib(UINib(nibName: "MocTableCell", bundle: nil)), id: "Cell")
+   ]
 }
